@@ -20,7 +20,7 @@ class GenreTest extends TestCase
     {
         factory(Genre::class)->create([
             'name' => 'test'
-        ])->first();
+        ]);
         $genres = Genre::all();
         $this->assertCount(1, $genres);
 
@@ -71,7 +71,7 @@ class GenreTest extends TestCase
         /** @var Genre $genre */
         $genre = factory(Genre::class)->create([
             'is_active' => false
-        ])->first();
+        ]);
 
         $data = [
             'name' => 'test_name_updated',
@@ -88,7 +88,7 @@ class GenreTest extends TestCase
     public function testeDelete()
     {
         /** @var Genre $genre */
-        $genre = factory(Genre::class)->create()->first();
+        $genre = factory(Genre::class)->create();
         $genre->delete();
         $this->assertNull(Genre::find($genre->id));
 
