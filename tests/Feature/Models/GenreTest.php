@@ -24,7 +24,7 @@ class GenreTest extends TestCase
         $genres = Genre::all();
         $this->assertCount(1, $genres);
 
-        $genresKeys = array_keys($genres->first()->getAttributes());
+        $genreKeys = array_keys($genres->first()->getAttributes());
         $this->assertEquals(
             [
                 'id',
@@ -34,7 +34,7 @@ class GenreTest extends TestCase
                 'created_at',
                 'updated_at'
             ],
-            $genresKeys
+            $genreKeys
         );
 
     }

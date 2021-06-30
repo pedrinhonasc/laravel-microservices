@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
-class CategoryTest extends TestCase
+class CategoryUnitTest extends TestCase
 {
     private $category;
 
